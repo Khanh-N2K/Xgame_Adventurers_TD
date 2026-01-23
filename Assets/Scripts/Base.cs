@@ -6,8 +6,6 @@ public class Base : MonoBehaviour
 
     public Info info;
     public int currenHeath;
-    
-    public AnimationStatus animationStatus;
     public Animator animator;
     public string idleAnimName = "idle";
     public string moveAnimName = "move";
@@ -23,7 +21,6 @@ public class Base : MonoBehaviour
     public virtual void switchStatus(Status status)
     {
         this.status = status;
-        animationStatus.SwitchAnim(status);
 
         switch (status)
         {
@@ -41,7 +38,7 @@ public class Base : MonoBehaviour
 
     public virtual void TakeDamage(int damage)
     {
-        
+
     }
 
     public virtual void SetTarget(Base target)
