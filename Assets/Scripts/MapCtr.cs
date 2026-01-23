@@ -37,13 +37,33 @@ public class MapCtr : Singleton<MapCtr>
         }
     }
 
-    public void StartSpawn()
+    public void SpawnEnemy()
     {
-        
+        StartCoroutine(SpawnEnemyWave(currentWave));
     }
     public bool CheckEndWave()
     {
-        return true;
+        bool resuit = true;
+        for(int i = 0 ; i < listEnemys.Count ; i++)
+        {
+            if(listEnemys[i].status != Status.Die)
+            {
+                return false;
+            }
+        }
+
+        for(int i = 0 ; i < listCharacters.Count ; i++)
+        {
+            if(listCharacters[i].status != Status.Die)
+            {
+                return false;
+            }
+        }
+
+        // tăng wave lên
+        currentWave ++;
+
+        return resuit;
     }
     public void SpawnCharacter(int id)
     {
