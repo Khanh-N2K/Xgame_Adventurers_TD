@@ -37,6 +37,48 @@ public class MapCtr : Singleton<MapCtr>
         }
     }
 
+    public Base GetClosestEnemy(Vector3 root)
+    {
+        if (listEnemys.Count == 0)
+        {
+            return null;
+        }
+
+        Base closestCharacter = listEnemys[0];
+        float minDistance = Vector3.SqrMagnitude(closestCharacter.transform.position - root);
+        for (int i = 1; i < listEnemys.Count; i++)
+        {
+            if (listEnemys[i].status != Status.Die 
+                && Vector3.SqrMagnitude(listEnemys[i].transform.position - root) < minDistance)
+            {
+                minDistance = Vector3.SqrMagnitude(listEnemys[i].transform.position - root);
+                closestCharacter = listEnemys[i];
+            }
+        }
+        return closestCharacter;
+    }
+
+    public Base GetClosestCharacter(Vector3 root)
+    {
+        if (listCharacters.Count == 0)
+        {
+            return null;
+        }
+
+        Base closestCharacter = listCharacters[0];
+        float minDistance = Vector3.SqrMagnitude(closestCharacter.transform.position - root);
+        for (int i = 1; i < listCharacters.Count; i++)
+        {
+            if (listCharacters[i].status != Status.Die
+                && Vector3.SqrMagnitude(listCharacters[i].transform.position - root) < minDistance)
+            {
+                minDistance = Vector3.SqrMagnitude(listCharacters[i].transform.position - root);
+                closestCharacter = listCharacters[i];
+            }
+        }
+        return closestCharacter;
+    }
+
     public void SpawnEnemy()
     {
         StartCoroutine(SpawnEnemyWave(currentWave));

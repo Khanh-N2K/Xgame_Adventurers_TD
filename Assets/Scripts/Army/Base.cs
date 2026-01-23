@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 public class Base : MonoBehaviour
 {
@@ -6,10 +7,13 @@ public class Base : MonoBehaviour
 
     public Status status;
 
+    public bool isEnemy;
+
     [Header("Info")]
 
     public Info info;
     public int currenHeath;
+    public int maxHealth;
 
     [Header("Animator")]
 
@@ -18,6 +22,7 @@ public class Base : MonoBehaviour
     public string moveAnimName = "move";
     public string attackeAnimName = "attack";
     public string dieAnimName = "die";
+    public float delayDestroyTime = 2f;
 
     [Header("Target")]
 
@@ -26,25 +31,24 @@ public class Base : MonoBehaviour
     private void Awake()
     {
         SetUp();
-        //SwitchStatus(Status.Idle);
+        SwitchStatus(Status.Idle);
     }
 
     public virtual void SetUp()
     {
         currenHeath = info.heath;
+        maxHealth = info.heath;
     }
 
     public virtual void SwitchStatus(Status status)
     {
-        this.status = status;
+        StopAllCoroutines();
 
+        this.status = status;
         switch (status)
         {
             case Status.Idle:
                 HandleIdle();
-                break;
-            case Status.Move:
-                HandleMove();
                 break;
             case Status.Attack:
                 HandleAttack();
@@ -57,7 +61,12 @@ public class Base : MonoBehaviour
 
     public virtual void TakeDamage(int damage)
     {
-
+        currenHeath -= damage;
+        if(currenHeath < 0)
+        {
+            currenHeath = 0;
+            SwitchStatus(Status.Die);
+        }
     }
 
     public virtual void SetTarget(Base target)
@@ -67,39 +76,57 @@ public class Base : MonoBehaviour
 
     public void PlayAnimation(string animName)
     {
-        //animator.CrossFade(animName, 0.1f);
+        if (animator.HasState(0, Animator.StringToHash(animName)))
+        {
+            animator.CrossFade(animName, 0.1f);
+        }
     }
 
-    public void MoveTo(Vector3 targetPos)
+    protected Base GetClosestTarget()
     {
-
-    }
-
-    protected virtual void StartAttack()
-    {
-
+        Base target;
+        if (isEnemy)
+        {
+            target = MapCtr.Instance.GetClosestCharacter(transform.position);
+        }
+        else
+        {
+            target = MapCtr.Instance.GetClosestEnemy(transform.position);
+        }
+        return target;
     }
 
     #region ___ STATUS ___
 
-    public void HandleIdle()
+    protected virtual void HandleIdle()
     {
         PlayAnimation(idleAnimName);
     }
 
-    public void HandleMove()
+    protected virtual void HandleAttack()
     {
-        PlayAnimation(moveAnimName);
+
     }
 
-    public void HandleAttack()
+    protected virtual void HandleDie()
     {
-        PlayAnimation(attackeAnimName);
-    }
+        if (isEnemy)
+        {
+            MapCtr.Instance.listEnemys.Remove(this);
+        }
+        else
+        {
+            MapCtr.Instance.listCharacters.Remove(this);
+        }
 
-    public void HandleDie()
-    {
         PlayAnimation(dieAnimName);
+
+        Invoke(nameof(DestroySelf), delayDestroyTime);
+    }
+
+    private void DestroySelf()
+    {
+        Destroy(gameObject);
     }
 
     #endregion ___
