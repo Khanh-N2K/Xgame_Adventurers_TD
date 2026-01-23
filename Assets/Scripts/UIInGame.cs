@@ -4,12 +4,12 @@ using UnityEngine.UI;
 public class UIInGame : Singleton<UIInGame>
 {
     public int Coin = 50;
-    public Button[] listBtns;
+    public CardSpawn[] listCards;
     public void Start()
     {
-        for (int i = 0; i < listBtns.Length; i++)
+        for (int i = 0; i < listCards.Length; i++)
         {
-            listBtns[i].onClick.AddListener(() => SpawnCharacter(i));
+            listCards[i].AddListener(() => SpawnCharacter(i));
         }
     }
     public void SpawnCharacter(int idx)
