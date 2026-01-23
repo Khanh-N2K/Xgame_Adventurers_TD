@@ -1024,7 +1024,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: []
-  characterPrefab: []
+  characterPrefab:
+  - {fileID: 1049792955854693553, guid: a99097df093a9c24192a2b7612465616, type: 3}
+  - {fileID: 1049792955854693553, guid: 34087907f965b054f9bc4c9cacf2cf16, type: 3}
+  - {fileID: 1049792955854693553, guid: c9a6034a756907a479bda27d60568160, type: 3}
   listEnemys: []
   listCharacters: []
   characterTransform: {fileID: 2119798015}
