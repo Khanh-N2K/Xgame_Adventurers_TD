@@ -20,11 +20,11 @@ public class RangedNPC : Base
                     shootPoint.rotation
                 );
 
-                ArrowProjectile projectile = arrow.GetComponent<ArrowProjectile>();
-                if (projectile != null)
-                {
-                    projectile.Init(target.transform);
-                }
+                // ArrowProjectile projectile = arrow.GetComponent<ArrowProjectile>();
+                // if (projectile != null)
+                // {
+                //     projectile.Init(target.transform);
+                // }
             }
         }
 
