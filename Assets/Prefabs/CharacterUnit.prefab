@@ -82,7 +82,7 @@ MonoBehaviour:
     damage: 0
     speed: 0
     range: 0
-  currenHeath: 0
+  currenHeath: 100
   animationStatus: {fileID: 0}
   animator: {fileID: 0}
   idleAnimName: idle

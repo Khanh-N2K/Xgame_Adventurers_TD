@@ -98,7 +98,7 @@ public class Base : MonoBehaviour
 
     #region ___ STATUS ___
 
-    protected virtual void HandleIdle()
+    protected void HandleIdle()
     {
         PlayAnimation(idleAnimName);
     }
