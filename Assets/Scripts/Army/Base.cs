@@ -142,7 +142,7 @@ public class Base : MonoBehaviour
 
     protected virtual void HandleMove()
     {
-        Vector3 destination = new Vector3(-0.65f, transform.position.y, transform.position.z);
+        Vector3 destination = new Vector3(-0.56f, transform.position.y, transform.position.z);
         StartCoroutine(MoveToPositionIE(destination));
     }
 
@@ -259,9 +259,13 @@ public class Base : MonoBehaviour
         // Enemy auto-move decision
         if (isEnemy)
         {
-            if (Vector3.Distance(transform.position, new Vector3(-0.65f, transform.position.y, transform.position.z)) > 0.5f)
+            if (Vector3.Distance(transform.position, new Vector3(-0.56f, transform.position.y, transform.position.z)) > 0.5f)
             {
                 SwitchStatus(Status.Move);
+            }
+            else
+            {
+                StartCoroutine(AttackFortressIE());
             }
         }
         else
@@ -278,7 +282,6 @@ public class Base : MonoBehaviour
 
     protected virtual void HandleAttack()
     {
-        PlayAnimation(attackAnimName);
         FindTargetThenHandleAction();
     }
 
@@ -324,6 +327,21 @@ public class Base : MonoBehaviour
         // Target defeated, find next target
         target = null;
         SwitchStatus(Status.Attack);
+    }
+
+    protected IEnumerator AttackFortressIE()
+    {
+        while (true)
+        {
+            // Call the attack action (can be overridden for different attack types)
+            PerformAttackAction();
+
+            yield return new WaitForSeconds(info.attackDelay);
+
+            UIInGame.Instance.TakeDamage(info.damage);
+
+            yield return null;
+        }
     }
 
     protected bool IsTargetValid()
