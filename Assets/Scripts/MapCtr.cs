@@ -174,7 +174,7 @@ public class MapCtr : Singleton<MapCtr>
         Base Character = GetCharacterById(id);
         if (Character == null) return null;
         int idx = Random.Range(0, PosZ.Length);
-        Vector3 pos = new Vector3(-0.65f, 0.03f, PosZ[idx]);
+        Vector3 pos = new Vector3(-0.55f, 0.03f, PosZ[idx]);
         Base newCharacter = Instantiate(Character, parent);
         newCharacter.transform.position = pos;
         newCharacter.transform.rotation = Quaternion.identity;
