@@ -1893,7 +1893,7 @@ MonoBehaviour:
   - {fileID: 6030019789154431937, guid: dce03d9e3ad71da4a8fc339c0c3a723e, type: 3}
   - {fileID: 3562339207818911312, guid: 7f4d17562dc7d384b844ea90c2a1c1f8, type: 3}
   characterPrefab:
-  - {fileID: 318003351765817040, guid: a99097df093a9c24192a2b7612465616, type: 3}
+  - {fileID: 6559582900809797473, guid: a99097df093a9c24192a2b7612465616, type: 3}
   - {fileID: 39842073049753084, guid: 34087907f965b054f9bc4c9cacf2cf16, type: 3}
   - {fileID: 8554290105625983096, guid: c9a6034a756907a479bda27d60568160, type: 3}
   listEnemys: []
