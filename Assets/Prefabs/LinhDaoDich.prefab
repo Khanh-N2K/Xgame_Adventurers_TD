@@ -100,12 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 0
-  isEnemy: 0
+  isEnemy: 1
   info:
     id: 0
     heath: 100
     damage: 20
-    speed: 3
+    speed: 0.1
     attackDelay: 0.3
     range: 2
   currenHeath: 0
@@ -113,9 +113,10 @@ MonoBehaviour:
   animator: {fileID: 8790130322432835098}
   idleAnimName: idle
   moveAnimName: move
-  attackeAnimName: attack
+  attackAnimName: attack
   dieAnimName: die
   delayDestroyTime: 2
+  stopDistance: 0.1
   target: {fileID: 0}
 --- !u!1001 &1132330540218273307
 PrefabInstance:
@@ -139,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.0008
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -147,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0046
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -155,15 +156,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0045012ca92aeb5498c6549eb4ac7eb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

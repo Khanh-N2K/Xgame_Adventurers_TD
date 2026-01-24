@@ -105,7 +105,7 @@ MonoBehaviour:
     id: 2
     heath: 100
     damage: 20
-    speed: 4
+    speed: 0.1
     attackDelay: 0.2
     range: 2
   currenHeath: 0
@@ -116,6 +116,7 @@ MonoBehaviour:
   attackeAnimName: attack
   dieAnimName: die
   delayDestroyTime: 2
+  stopDistance: 0.1
   target: {fileID: 0}
 --- !u!1 &2409955525184147806
 GameObject:

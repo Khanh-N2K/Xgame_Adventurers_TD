@@ -116,6 +116,7 @@ MonoBehaviour:
   attackeAnimName: attack
   dieAnimName: die
   delayDestroyTime: 2
+  stopDistance: 0.1
   target: {fileID: 0}
 --- !u!1 &2951846467006015629
 GameObject:
@@ -143,13 +144,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2951846467006015629}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.70858955, z: -0, w: 0.70562094}
   m_LocalPosition: {x: -0.0005, y: 0.0241, z: 0}
   m_LocalScale: {x: 0.26291505, y: 0.26291502, z: 0.26291505}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6233391663389969020}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.241, z: 0}
 --- !u!33 &1446530147218750866
 MeshFilter:
   m_ObjectHideFlags: 0
