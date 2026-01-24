@@ -180,4 +180,20 @@ public class MapCtr : Singleton<MapCtr>
         return newCharacter;
     }
 
+    #region ___ CONTEXT MENU ___
+
+    [ContextMenu("Test All Attack")]
+    private void TestAllAttack()
+    {
+        foreach(var enemy in listEnemys)
+        {
+            enemy.SwitchStatus(Status.Attack);
+        }
+        foreach(var character in listCharacters)
+        {
+            character.SwitchStatus(Status.Attack);
+        }
+    }
+
+    #endregion ___
 }
