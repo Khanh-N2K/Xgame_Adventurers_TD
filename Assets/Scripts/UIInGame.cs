@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System;
 
 public class UIInGame : Singleton<UIInGame>
 {
@@ -11,6 +12,10 @@ public class UIInGame : Singleton<UIInGame>
     public Text coinTxt;
     public CardSpawn[] listCards;
     public float timeBounsCoin = 5;
+    public RectTransform VsRect;
+    public RectTransform DichRect;
+    public RectTransform QuanRect;
+    public CanvasGroup canvasGroup;
     public void Start()
     {
         coinTxt.text = Coin.ToString();
@@ -19,6 +24,21 @@ public class UIInGame : Singleton<UIInGame>
             int idx = i;
             listCards[i].AddListener(() => SpawnCharacter(idx));
         }
+        DoStart(null);
+    }
+    public void DoStart(Action cb)
+    {
+        VsRect.DOAnchorPosY(0, 0.5f).SetEase(Ease.InOutBack).OnComplete(() =>
+        {
+            DichRect.DOAnchorPosX(0, 0.5f).SetDelay(0.1f).SetEase(Ease.InOutBack);
+            QuanRect.DOAnchorPosX(0, 0.5f).SetDelay(0.1f).SetEase(Ease.InOutBack).OnComplete(() =>
+            {
+                canvasGroup.DOFade(0, 0.5f).SetDelay(0.25f).OnComplete(() =>
+                {
+                    cb?.Invoke();
+                });
+            });
+        });
     }
     public void Update()
     {
@@ -30,7 +50,7 @@ public class UIInGame : Singleton<UIInGame>
         if (timeBounsCoin <= 0)
         {
             timeBounsCoin = 5;
-            AddCoin(3);
+            AddCoin(5);
         }
     }
     public void SpawnCharacter(int idx)
