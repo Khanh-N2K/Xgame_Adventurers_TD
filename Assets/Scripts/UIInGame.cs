@@ -7,12 +7,22 @@ public class UIInGame : Singleton<UIInGame>
     public int Coin = 50;
     public Text coinTxt;
     public CardSpawn[] listCards;
+    public float timeBounsCoin = 5;
     public void Start()
     {
         coinTxt.text = Coin.ToString();
         for (int i = 0; i < listCards.Length; i++)
         {
             listCards[i].AddListener(() => SpawnCharacter(i));
+        }
+    }
+    public void Update()
+    {
+        timeBounsCoin -= Time.deltaTime;
+        if (timeBounsCoin <= 0)
+        {
+            timeBounsCoin = 5;
+            AddCoin(3);
         }
     }
     public void SpawnCharacter(int idx)

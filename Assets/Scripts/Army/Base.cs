@@ -62,7 +62,7 @@ public class Base : MonoBehaviour
     public virtual void TakeDamage(int damage)
     {
         currenHeath -= damage;
-        if(currenHeath < 0)
+        if (currenHeath < 0)
         {
             currenHeath = 0;
             SwitchStatus(Status.Die);
@@ -76,10 +76,10 @@ public class Base : MonoBehaviour
 
     public void PlayAnimation(string animName)
     {
-        if (animator.HasState(0, Animator.StringToHash(animName)))
-        {
-            animator.CrossFade(animName, 0.1f);
-        }
+        // if (animator.HasState(0, Animator.StringToHash(animName)))
+        // {
+        //     animator.CrossFade(animName, 0.1f);
+        // }
     }
 
     protected Base GetClosestTarget()
