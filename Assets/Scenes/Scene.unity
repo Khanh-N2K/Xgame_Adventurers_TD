@@ -1254,6 +1254,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1193342084}
     m_Modifications:
+    - target: {fileID: 919132149155446097, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899239570584463875, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015991886111342739, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2061521650324769084, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310959414132389947, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2313134262627791359, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2443917190297833663, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1297,6 +1321,58 @@ PrefabInstance:
     - target: {fileID: 3071834350100941317, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
       propertyPath: m_Name
       value: map
+      objectReference: {fileID: 0}
+    - target: {fileID: 3094188257620624164, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276103492882552556, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434233035508799822, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3817861600132500675, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881403447766178299, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024470649480950634, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837561197854660700, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6870060008359131056, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915263683560790536, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7474237296696948713, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692265368174913642, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218239788246497809, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8855978369034675894, guid: 21d106b02c553f94eba6b2c1974684a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1488,12 +1564,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 2720214513782960881, guid: a99097df093a9c24192a2b7612465616, type: 3}
   - {fileID: 492767129465442263, guid: 34087907f965b054f9bc4c9cacf2cf16, type: 3}
+  - {fileID: 2720214513782960881, guid: a99097df093a9c24192a2b7612465616, type: 3}
   - {fileID: 1049792955854693553, guid: c9a6034a756907a479bda27d60568160, type: 3}
   characterPrefab:
-  - {fileID: 2720214513782960881, guid: a99097df093a9c24192a2b7612465616, type: 3}
   - {fileID: 492767129465442263, guid: 34087907f965b054f9bc4c9cacf2cf16, type: 3}
+  - {fileID: 2720214513782960881, guid: a99097df093a9c24192a2b7612465616, type: 3}
   - {fileID: 1049792955854693553, guid: c9a6034a756907a479bda27d60568160, type: 3}
   listEnemys: []
   listCharacters: []

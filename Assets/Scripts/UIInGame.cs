@@ -19,7 +19,7 @@ public class UIInGame : Singleton<UIInGame>
     public void Update()
     {
         timeBounsCoin -= Time.deltaTime;
-        if (timeBounsCoin <= 0)
+        if(timeBounsCoin<= 0)
         {
             timeBounsCoin = 5;
             AddCoin(3);

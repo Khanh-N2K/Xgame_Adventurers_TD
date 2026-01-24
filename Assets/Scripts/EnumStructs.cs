@@ -15,5 +15,6 @@ public enum Status
 {
     Idle,
     Attack,
+    Move,
     Die,
 }
