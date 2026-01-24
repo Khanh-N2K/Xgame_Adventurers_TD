@@ -4,6 +4,9 @@ using DG.Tweening;
 
 public class UIInGame : Singleton<UIInGame>
 {
+    public int Hp = 1000;
+    public Text hpTxt;
+    public Image fillHp;
     public int Coin = 50;
     public Text coinTxt;
     public CardSpawn[] listCards;
@@ -18,8 +21,12 @@ public class UIInGame : Singleton<UIInGame>
     }
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            TakeDamage(10);
+        }
         timeBounsCoin -= Time.deltaTime;
-        if(timeBounsCoin<= 0)
+        if (timeBounsCoin <= 0)
         {
             timeBounsCoin = 5;
             AddCoin(3);
@@ -64,6 +71,29 @@ public class UIInGame : Singleton<UIInGame>
             endValue,
             0.5f
         ).SetEase(Ease.InQuad).OnComplete(() => { coinTxt.text = Coin.ToString(); });
+    }
+    public void TakeDamage(int damage)
+    {
+        int startValue = Hp;
+        int endValue = Mathf.Max(0, Hp - damage);
+
+        Hp = endValue;
+        CheckClickListCard();
+        DOTween.To(
+            () => startValue,
+            x =>
+            {
+                startValue = x;
+                hpTxt.text = x.ToString();
+                fillHp.fillAmount = x / 1000f;
+            },
+            endValue,
+            0.5f
+        ).SetEase(Ease.InQuad).OnComplete(() =>
+        {
+            hpTxt.text = Hp.ToString();
+            fillHp.fillAmount = Hp / 1000f;
+        });
     }
     public void CheckClickListCard()
     {
