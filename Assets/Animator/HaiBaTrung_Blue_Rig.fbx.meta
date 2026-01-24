@@ -3,7 +3,12 @@ guid: d1d8253c280bdf942b417b4d32b8cdf7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hai_ba_trung_03
+    second: {fileID: 2100000, guid: 27a87a4bfe7510d4eb969704820f96be, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

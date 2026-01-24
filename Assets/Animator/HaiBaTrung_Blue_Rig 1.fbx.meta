@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3494b6a71c86a8948885d0ca2da6cd75
+guid: 17adbd2a5b635f543bc1f07acb05c456
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: quan_dich_leve
-    second: {fileID: 2100000, guid: 9a816579de134534599cb4833b4f5e2e, type: 2}
+      name: hai_ba_trung_03
+    second: {fileID: 2100000, guid: d41b34daa180d794f905d56019e8ede6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
