@@ -63,7 +63,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 806371544709234526}
-  - component: {fileID: 318003351765817040}
+  - component: {fileID: 6559582900809797473}
   m_Layer: 0
   m_Name: LinhCung
   m_TagString: Untagged
@@ -87,7 +87,7 @@ Transform:
   - {fileID: 6233391663389969020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &318003351765817040
+--- !u!114 &6559582900809797473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975473098452074389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00ace074da248914782a16c20c2e2d8f, type: 3}
+  m_Script: {fileID: 11500000, guid: c7caf63bae26a6b44a239911272e5d36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   status: 0
@@ -105,18 +105,19 @@ MonoBehaviour:
     id: 0
     heath: 100
     damage: 10
-    speed: 2
+    speed: 0.1
     attackDelay: 0.2
-    range: 100
+    range: 0.5
   currenHeath: 0
   maxHealth: 0
   animator: {fileID: 6204135123995722132}
   idleAnimName: idle
   moveAnimName: move
-  attackeAnimName: attack
+  attackAnimName: attack
   dieAnimName: die
   delayDestroyTime: 2
   stopDistance: 0.1
+  rotationSpeed: 10
   target: {fileID: 0}
 --- !u!1 &2951846467006015629
 GameObject:

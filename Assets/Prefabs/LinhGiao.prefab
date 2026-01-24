@@ -107,16 +107,17 @@ MonoBehaviour:
     damage: 20
     speed: 0.1
     attackDelay: 0.2
-    range: 2
+    range: 0.1
   currenHeath: 0
   maxHealth: 0
   animator: {fileID: 8867602727704956419}
   idleAnimName: idle
   moveAnimName: move
-  attackeAnimName: attack
+  attackAnimName: attack
   dieAnimName: die
   delayDestroyTime: 2
   stopDistance: 0.1
+  rotationSpeed: 10
   target: {fileID: 0}
 --- !u!1 &2409955525184147806
 GameObject:

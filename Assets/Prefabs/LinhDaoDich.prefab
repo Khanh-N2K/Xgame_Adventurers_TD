@@ -107,7 +107,7 @@ MonoBehaviour:
     damage: 20
     speed: 0.1
     attackDelay: 0.3
-    range: 2
+    range: 0.1
   currenHeath: 0
   maxHealth: 0
   animator: {fileID: 8790130322432835098}
@@ -117,6 +117,7 @@ MonoBehaviour:
   dieAnimName: die
   delayDestroyTime: 2
   stopDistance: 0.1
+  rotationSpeed: 10
   target: {fileID: 0}
 --- !u!1001 &1132330540218273307
 PrefabInstance:

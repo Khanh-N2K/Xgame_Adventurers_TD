@@ -112,6 +112,7 @@ public class MapCtr : Singleton<MapCtr>
     public void SpawnCharacter(int id)
     {
         Base Character = CreateCharacterObject(id, characterTransform);
+        Character.SwitchStatus(Status.Attack);
         if (Character == null) return;
         listCharacters.Add(Character);
     }

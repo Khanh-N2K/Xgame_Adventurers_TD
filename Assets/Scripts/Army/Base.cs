@@ -151,6 +151,15 @@ public class Base : MonoBehaviour
 
         while (Vector3.Distance(transform.position, pos) > stopDistance)
         {
+            // Check if in range attack 
+            Base target = GetClosestTarget();
+            if (target != null && Vector3.SqrMagnitude(target.transform.position - transform.position) < info.range * info.range)
+            {
+                SetTarget(target);
+                SwitchStatus(Status.Attack);
+                yield break;
+            }
+
             // Move toward position
             transform.position = Vector3.MoveTowards(
                 transform.position,
