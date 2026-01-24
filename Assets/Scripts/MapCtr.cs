@@ -162,9 +162,7 @@ public class MapCtr : Singleton<MapCtr>
         Base enemy = GetEnemyById(id);
         if (enemy == null) return null;
 
-        Base newEnemy = Instantiate(enemy, parent);
-        newEnemy.transform.position = GetEnemySpawnPos();
-        newEnemy.transform.rotation = Quaternion.identity;
+        Base newEnemy = Instantiate(enemy, GetEnemySpawnPos(), Quaternion.identity, parent);
         return newEnemy;
     }
 
@@ -173,9 +171,7 @@ public class MapCtr : Singleton<MapCtr>
         Base character = GetCharacterById(id);
         if (character == null) return null;
 
-        Base newCharacter = Instantiate(character, parent);
-        newCharacter.transform.position = GetCharacterSpawnPos();
-        newCharacter.transform.rotation = Quaternion.identity;
+        Base newCharacter = Instantiate(character, GetCharacterSpawnPos(), Quaternion.identity, parent);
         return newCharacter;
     }
 
