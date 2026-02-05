@@ -33,18 +33,6 @@ public class MapCtr : Singleton<MapCtr>
         UIInGame.Instance.DoStart(() => StartCoroutine(SpawnEnemyWave(0)));
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-            SpawnCharacter(0);
-
-        if (Input.GetKeyDown(KeyCode.D))
-            SpawnCharacter(1);
-
-        if (Input.GetKeyDown(KeyCode.W))
-            SpawnCharacter(2);
-    }
-
     #region ==== GET CLOSEST ====
 
     public Base GetClosestEnemy(Vector3 root)
@@ -93,11 +81,14 @@ public class MapCtr : Singleton<MapCtr>
 
     public void SpawnCharacter(int id)
     {
-        Base character = CreateCharacterObject(id, characterTransform);
-        if (character == null) return;
+        for (int i = 0; i < 5; i++)
+        {
+            Base character = CreateCharacterObject(id, characterTransform);
+            if (character == null) return;
 
-        character.SwitchStatus(Status.Attack);
-        listCharacters.Add(character);
+            character.SwitchStatus(Status.Attack);
+            listCharacters.Add(character);
+        }
     }
 
     #endregion

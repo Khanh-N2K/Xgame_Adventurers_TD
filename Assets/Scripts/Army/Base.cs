@@ -371,7 +371,7 @@ public class Base : MonoBehaviour
         {
             MapCtr.Instance.listEnemys.Remove(this);
             MapCtr.Instance.CheckEndWave();
-            UIInGame.Instance.AddCoin(5);
+            UIInGame.Instance.AddCoin(1);
         }
         else
             MapCtr.Instance.listCharacters.Remove(this);

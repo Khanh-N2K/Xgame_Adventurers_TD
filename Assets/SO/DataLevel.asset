@@ -17,15 +17,11 @@ MonoBehaviour:
     - timeDelay: 0
       infoTurns:
       - timedelay: 5
-        enemy: 0000000000000000
-      - timedelay: 5
-        enemy: 0100000001000000
-      - timedelay: 5
-        enemy: 0000000000000000
-      - timedelay: 5
-        enemy: 0100000001000000
-      - timedelay: 5
-        enemy: 0000000000000000
+        enemy: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+      - timedelay: 10
+        enemy: 0100000001000000010000000100000001000000
+      - timedelay: 20
+        enemy: 0000000000000000000000000000000000000000
     - timeDelay: 0
       infoTurns:
       - timedelay: 0
