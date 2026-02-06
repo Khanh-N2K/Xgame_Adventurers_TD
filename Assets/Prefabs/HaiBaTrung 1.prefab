@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6233391663389969020}
-  - component: {fileID: 6204135123995722132}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -33,27 +32,6 @@ Transform:
   - {fileID: 2574463922180095009}
   m_Father: {fileID: 806371544709234526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6204135123995722132
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163499215905330058}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3280fb8f1a9d84418940ad979b67895, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1975473098452074389
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +91,7 @@ MonoBehaviour:
   currenHeath: 0
   maxHealth: 0
   fill: {fileID: 0}
-  animator: {fileID: 6204135123995722132}
+  animator: {fileID: 8456204946598504027}
   idleAnimName: idle
   moveAnimName: move
   attackAnimName: attack
@@ -246,6 +224,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HaiBaTrung_Blue_Rig 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 17adbd2a5b635f543bc1f07acb05c456, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cd6d8a99e98d4dd448a3590b2745333a, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 17adbd2a5b635f543bc1f07acb05c456, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -254,5 +240,10 @@ PrefabInstance:
 --- !u!4 &2574463922180095009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 17adbd2a5b635f543bc1f07acb05c456, type: 3}
+  m_PrefabInstance: {fileID: 2607843881293126602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8456204946598504027 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 17adbd2a5b635f543bc1f07acb05c456, type: 3}
   m_PrefabInstance: {fileID: 2607843881293126602}
   m_PrefabAsset: {fileID: 0}
