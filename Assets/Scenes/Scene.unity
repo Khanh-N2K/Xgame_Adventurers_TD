@@ -992,7 +992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 318003351765817040, guid: cf701195e5c5def49964d9af34527bc8, type: 3}
       propertyPath: info.damage
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 318003351765817040, guid: cf701195e5c5def49964d9af34527bc8, type: 3}
       propertyPath: info.attackDelay
@@ -2631,7 +2631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 318003351765817040, guid: 8cc663103eaec564484d601d4d63eb17, type: 3}
       propertyPath: info.damage
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 318003351765817040, guid: 8cc663103eaec564484d601d4d63eb17, type: 3}
       propertyPath: info.attackDelay

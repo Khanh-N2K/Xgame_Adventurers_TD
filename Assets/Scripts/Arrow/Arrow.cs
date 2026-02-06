@@ -1,7 +1,10 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class ArrowProjectile : MonoBehaviour
 {
+    public ParticleSystem explosionFX;
+
     public float speed = 15f;
     public float arcHeight;
 
@@ -19,7 +22,14 @@ public class ArrowProjectile : MonoBehaviour
         lastPos = startPos;
 
         float distance = Vector3.Distance(startPos, target.position);
+        timer = 0;
         travelTime = distance / speed;
+
+        if(explosionFX != null)
+        {
+            explosionFX.Stop();
+            explosionFX.Clear();
+        }
     }
 
     void Update()
@@ -35,6 +45,7 @@ public class ArrowProjectile : MonoBehaviour
 
         if (t >= 1f)
         {
+            PlayFX();
             HitTarget();
             return;
         }
@@ -59,6 +70,18 @@ public class ArrowProjectile : MonoBehaviour
     void HitTarget()
     {
         // TODO: Damage target
+
         Destroy(gameObject);
+    }
+
+    private void PlayFX()
+    {
+        if (explosionFX == null)
+        {
+            return;
+        }
+        ParticleSystem fx = Instantiate(explosionFX, transform.position, Quaternion.identity);
+        fx.transform.SetParent(null);
+        fx.Play();
     }
 }

@@ -132,7 +132,7 @@ MonoBehaviour:
   stopDistance: 0.1
   rotationSpeed: 10
   target: {fileID: 0}
-  arrowPrefab: {fileID: 2932862531482561571, guid: a1163922fbc6e5b47874d19d737fab8d, type: 3}
+  arrowPrefab: {fileID: 2932862531482561571, guid: da97f003790e2aa4d876662f8dbadcf1, type: 3}
   shootPoint: {fileID: 3298320752479722520}
 --- !u!1 &2951846467006015629
 GameObject:

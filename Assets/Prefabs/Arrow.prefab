@@ -14483,7 +14483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8983391820192092896
 Transform:
   m_ObjectHideFlags: 0
@@ -19328,7 +19328,7 @@ GameObject:
   - component: {fileID: 3245133298845901043}
   - component: {fileID: 726905085468177464}
   m_Layer: 0
-  m_Name: Arrow_Lua
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19414,7 +19414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc887924ab869740af43480ed77f4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionFX: {fileID: 5137578498641232920}
+  explosionFX: {fileID: 0}
   speed: 0.55
   arcHeight: 2
 --- !u!65 &726905085468177464
@@ -33962,7 +33962,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5255101078991334485
 Transform:
   m_ObjectHideFlags: 0

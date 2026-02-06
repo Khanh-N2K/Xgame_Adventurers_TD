@@ -4928,6 +4928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bc887924ab869740af43480ed77f4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionFX: {fileID: 6285173037469804843}
   speed: 0.55
   arcHeight: 2
 --- !u!65 &726905085468177464
