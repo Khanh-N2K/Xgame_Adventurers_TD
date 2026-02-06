@@ -80,7 +80,7 @@ public class ArrowProjectile : MonoBehaviour
         {
             return;
         }
-        ParticleSystem fx = Instantiate(explosionFX, transform.position, Quaternion.identity);
+        ParticleSystem fx = Instantiate(explosionFX, transform.position + Vector3.up * 0.03f, Quaternion.identity);
         fx.transform.SetParent(null);
         fx.Play();
     }
