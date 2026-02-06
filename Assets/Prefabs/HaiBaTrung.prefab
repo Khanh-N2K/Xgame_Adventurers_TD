@@ -105,12 +105,13 @@ MonoBehaviour:
   info:
     id: 0
     heath: 100
-    damage: 2
+    damage: 75
     speed: 2
-    attackDelay: 0.2
+    attackDelay: 1
     range: 100
   currenHeath: 0
   maxHealth: 0
+  fill: {fileID: 0}
   animator: {fileID: 6204135123995722132}
   idleAnimName: idle
   moveAnimName: move
@@ -120,7 +121,7 @@ MonoBehaviour:
   stopDistance: 0.1
   rotationSpeed: 10
   target: {fileID: 0}
-  arrowPrefab: {fileID: 2932862531482561571, guid: a1163922fbc6e5b47874d19d737fab8d, type: 3}
+  arrowPrefab: {fileID: 2932862531482561571, guid: 6a8bc478cb8063e40a76a03cb33033d2, type: 3}
   shootPoint: {fileID: 6032423205573885148}
 --- !u!1 &8865907117563311522
 GameObject:
