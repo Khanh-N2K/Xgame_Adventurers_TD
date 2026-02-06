@@ -1749,7 +1749,7 @@ MonoBehaviour:
   skillTransform: {fileID: 1844612969}
   maxPerRow: 3
   spacingZ: 0.15
-  spacingX: 0.15
+  spacingX: 0.3
   posY: 0.05
   isSkill: 0
 --- !u!1 &963194225

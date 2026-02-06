@@ -33,7 +33,7 @@ public class Skill : MonoBehaviour
         btn.enabled = false;
         skillTransform.position = new Vector3(-1, 0, 0);
         List<Transform> prefabs = new List<Transform>();
-        for (int i = 0; i < 15; i++)
+        for (int i = 0; i < 12; i++)
         {
             Transform newPrefab = Instantiate(skillPrefab, GetSpawnPos(), Quaternion.identity);
             newPrefab.transform.SetParent(skillTransform, false);

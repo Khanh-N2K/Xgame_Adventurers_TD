@@ -81,14 +81,14 @@ public class MapCtr : Singleton<MapCtr>
 
     public void SpawnCharacter(int id)
     {
-        for (int i = 0; i < 5; i++)
-        {
-            Base character = CreateCharacterObject(id, characterTransform);
-            if (character == null) return;
+        Base character = CreateCharacterObject(id, characterTransform);
+        if (character == null) return;
 
-            character.SwitchStatus(Status.Attack);
-            listCharacters.Add(character);
-        }
+        character.SwitchStatus(Status.Attack);
+        listCharacters.Add(character);
+        // for (int i = 0; i < 5; i++)
+        // {
+        // }
     }
 
     #endregion
@@ -147,7 +147,10 @@ public class MapCtr : Singleton<MapCtr>
         float z = (col - (maxPerRow - 1) / 2f) * spacingZ;
 
         characterSpawnIndex++;
-        return new Vector3(x, posY, z);
+        // return new Vector3(x, posY, z);
+        float[] posZ = new float[] { -0.06f, -0.03f, 0f, 0.03f, 0.06f };
+        int index = Random.Range(0, posZ.Length);
+        return new Vector3(-0.64f, posY, posZ[index]);
     }
 
     public Base CreateEnemyObject(int id, Transform parent)

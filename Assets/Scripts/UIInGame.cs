@@ -52,7 +52,7 @@ public class UIInGame : Singleton<UIInGame>
         if (timeBounsCoin <= 0)
         {
             timeBounsCoin = 5;
-            AddCoin(5);
+            AddCoin(30);
         }
     }
     public void SpawnCharacter(int idx)
