@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6233391663389969020}
-  - component: {fileID: 3081765183766998679}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -32,29 +31,9 @@ Transform:
   m_Children:
   - {fileID: 7975718395125617865}
   - {fileID: 910832708828355422}
+  - {fileID: 8388098478279518863}
   m_Father: {fileID: 806371544709234526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3081765183766998679
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163499215905330058}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3280fb8f1a9d84418940ad979b67895, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1975473098452074389
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +91,7 @@ MonoBehaviour:
   currenHeath: 0
   maxHealth: 0
   fill: {fileID: 7361121390669485444}
-  animator: {fileID: 3081765183766998679}
+  animator: {fileID: 2488432081603244277}
   idleAnimName: idle
   moveAnimName: move
   attackAnimName: attack
@@ -305,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tuong_dich
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5bbd678cee5e5a141ac6e8dd93b53eb5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -343,4 +326,95 @@ BoxCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5bbd678cee5e5a141ac6e8dd93b53eb5, type: 3}
   m_PrefabInstance: {fileID: 7576682825215095586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8350300854974483812
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6233391663389969020}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_Name
+      value: TuongDich_Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 188a1b40b7b71df4fbececaeea9c84da, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+--- !u!95 &2488432081603244277 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+  m_PrefabInstance: {fileID: 8350300854974483812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8388098478279518863 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 22979af8c2ba24845a921131a4564310, type: 3}
+  m_PrefabInstance: {fileID: 8350300854974483812}
   m_PrefabAsset: {fileID: 0}
